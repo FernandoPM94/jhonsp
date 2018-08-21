@@ -1,67 +1,87 @@
 body {
-    font: 24px Helvetica;
-    background-image: url("http://teambeyond.net/wp-content/uploads/2013/09/halo4-xptips-4.png");
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-    font-family: 'Helveticah', cursive;  
-    color:white;
-     font-size: large;
-   }
- 
-   #container {
-    min-height: 800px;
-    margin: 10px;
-    padding: 0px;
-    display: flex;
-    flex-flow: row;
-    }
-  
-   #container > .article {
-    margin: 4px;
-    padding: 5px;
-    border: 3px solid green;
-    border-radius: 7pt;
-    flex: 3 1 60%;
-    order: 2;
-    }
-   
-   
-   #container > .aside {
-    margin: 4px;
-    padding: 5px;
-    border: 4px solid green;
-    border-radius: 7pt;
-    flex: 1 6 30%;
-    order: 3;
-    }
-  
-   .header, .footer {
-    display: flex;
-    margin: 4px;
-    padding: 5px;
-    min-height: 100px;
-    border: 3px solid red;
-    border-radius: 7pt;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  font: 24px Helvetica;
+  background-image: url("http://teambeyond.net/wp-content/uploads/2013/09/halo4-xptips-4.png");
+  background-repeat: repeat;
+  background-size:100% 100%;
+  font-family: 'Helveticah', cursive;  
+  color:white;
+ font-size: large;
+ }
+
+ #container {
+   font-family: 'Helveticah', cursive;  
+  color:white;
+ font-size: large; 
+  min-height: 800px; 
+  margin: 10px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row;
      
-    }
+  }
+
+ #container > .article {
+  margin: 4px;
+  padding: 5px;
+  border: 3px solid green;
+  text-align: justify;
+  border-radius: 7pt;
+  flex: 1 1 auto; /*3 1 60% <flex-grow> <flex-shrink> <flex-basis> */
+  order: 1; /*2*/
+  }
  
  
-   @media all and (max-width: 640px) {  
-    #container, #page {
-    flex-flow: column;
-    }
+ #container > .aside {
+  margin: 4px;
+  padding: 5px;
+  border: 4px solid green;
+  border-radius: 7pt;
+  flex: 1 1 auto;  /*2 6 30%  <flex-grow> <flex-shrink> <flex-basis>*/
+  order: 2; /*3*/
+  }
+
+ .header{
+  display: flex;
+  margin: 4px;
+  padding: 5px;
+  min-height: auto;
+  min-width: 850px;
+  border: 3px solid green;
+  border-radius: 7pt;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+  }
+  
+ .footer{   
+ font-family: 'Helveticah', cursive;  
+  color:white;
+ font-size: large;  
+  display: flex;
+  margin: 4px;
+  padding: 5px;
+  min-height: 200px;
+  min-width: 300px;
+  border: 3px solid gold;
+  border-radius: 7pt;
+  flex: 1 1 auto;
+  flex-direction: row;
+align-items: center;
+justify-content: space-between;
+  }
+
+ @media all and (max-width: 300px) {  /*800*/
+  #container, #page {
+  flex-flow: column;
+  }
+
+  #container > .article, #container > .aside {
+  order: 0;
+  }
  
-    #container > .article, #container > .aside {
-    order: 0;
-    }
-   
-  #container > .aside, .header, .footer {
-     min-height: 100px;
-     max-height: 100px;
-    }
-       
-   }
- 
+#container > .aside, .header, .footer {
+   min-height: 400px; /*100*/
+   max-height: 400px;/*100*/
+  }
+     
+ }
