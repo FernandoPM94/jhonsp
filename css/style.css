@@ -1,73 +1,84 @@
 body {
-  font: 24px Helvetica;
   background-image: url("http://teambeyond.net/wp-content/uploads/2013/09/halo4-xptips-4.png");
   background-repeat: repeat;
   background-size:100% 100%;
+  color: white;
+  font: 24px Helvetica;
   font-family: 'Helveticah', cursive;  
-  color:white;
- font-size: large;
+  font-size: large;
  }
 
  #container {
+   color:white;
+   display: flex;
+   flex-flow:row;
    font-family: 'Helveticah', cursive;  
-  color:white;
- font-size: large; 
-  min-height: 800px; 
-  margin: 10px;
-  padding: 0px;
-  display: flex;
-  flex-flow: row;
+   font-size: large;
+   margin: 10px; 
+   min-height: 800px; 
+   padding: 0px;
      
   }
 
  #container > .article {
-  margin: 4px;
-  padding: 5px;
-  border: 3px solid green;
-  text-align: justify;
-  border-radius: 7pt;
-  flex: 1 1 auto; /*3 1 60% <flex-grow> <flex-shrink> <flex-basis> */
-  order: 1; /*2*/
+   background-image: url("https://img00.deviantart.net/1da1/i/2015/018/7/e/unsc_logo_by_cow41087-d5me4cr.png");
+   background-repeat: repeat;
+   background-size:100% ;
+   border: 3px solid green;
+   border-radius: 7pt;
+   flex: 1 1 auto; /*3 1 60% <flex-grow> <flex-shrink> <flex-basis> */
+   margin: 4px;
+   order: 1;
+   padding: 5px;
+   text-align: justify;
+  
   }
  
  
  #container > .aside {
-  margin: 4px;
-  padding: 5px;
   border: 4px solid green;
   border-radius: 7pt;
   flex: 1 1 auto;  /*2 6 30%  <flex-grow> <flex-shrink> <flex-basis>*/
+  margin: 4px;
+  padding: 5px;
   order: 2; /*3*/
+  text-align: justify;
   }
 
  .header{
-  display: flex;
-  margin: 4px;
-  padding: 5px;
-  min-height: auto;
-  min-width: 850px;
+   align-items: center;
+   border: 3px solid green;
+   border-radius: 7pt;
+   color: white;
+   display: flex;
+   font-family:'Helveticah',cursive;
+   margin: 4px;
+   padding: 5px;
+   min-height: auto;
+   min-width: 850px;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+  
+.footer{  
+  align-items: center; 
   border: 3px solid green;
   border-radius: 7pt;
-  flex-direction: row;
-  align-items:center;
-  justify-content: space-between;
-  }
-  
- .footer{   
- font-family: 'Helveticah', cursive;  
   color:white;
- font-size: large;  
   display: flex;
-  margin: 4px;
-  padding: 5px;
-  min-height: 200px;
-  min-width: 300px;
-  border: 3px solid gold;
-  border-radius: 7pt;
   flex: 1 1 auto;
   flex-direction: row;
-align-items: center;
-justify-content: space-between;
+  font-family: 'Helveticah', cursive;
+  font-size: large;  
+  justify-content: space-between;
+  margin: 4px;
+  min-height: 200px;
+  min-width: 300px;
+  padding: 5px;
+
+}
+  #myCarousel{
+    margin: 0 auto;
   }
 
  @media all and (max-width: 300px) {  /*800*/
